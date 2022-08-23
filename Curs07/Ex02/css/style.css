@@ -1,0 +1,15 @@
+p i {
+  color: red;
+}
+
+.line {
+  text-decoration: underline;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+a[href^="http://"] {
+  color: red;
+}
