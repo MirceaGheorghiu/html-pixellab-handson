@@ -1,1 +1,70 @@
+p b {
+  color: purple;
+}
 
+ul i {
+  text-decoration: underline;
+}
+
+h1 + h2 {
+  color: green;
+}
+
+h2 + h3 {
+  text-decoration: underline dotted red;
+  margin-top: 8px;
+}
+
+ol ~ h3 {
+  border: 1px solid blue;
+  padding: 5px;
+}
+
+ul ~ p {
+  border: 1px dotted black;
+  padding: 20px;
+}
+
+ul > li > ul > li {
+  text-decoration: underline;
+}
+
+p i {
+  color: blue;
+}
+
+.u-line i {
+  text-decoration: underline;
+}
+
+h3 + p {
+  margin-top: 0;
+}
+
+ol + h2 {
+  text-decoration: underline;
+}
+
+.random ~ p {
+  padding: 10px 12px;
+}
+
+.last-list ~ ul a {
+  color: yellow;
+}
+
+.my-list > li {
+  text-decoration: underline;
+}
+
+/* Pixetab-ul este verde (cu combinatorul / selectorul din cod),
+dar nu stiu daca combinatorul este corect
+(am observat ca in browser nu se produce nicio modificare de padding):
+poate pt ca primul ul are deja clasa .nested si nu mai exista alte 2 ul-uri in el, ci doare unul.
+Oare combinatorul corect ar fi fost:
+".nested li > ul > li > a" sau chiar ".nested ul > li > a" ? */
+
+.nested ul > li > ul > li > a {
+  display: inline-block;
+  padding: 5px;
+}
