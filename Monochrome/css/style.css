@@ -368,10 +368,289 @@ table {
 body {
   font-family: 'Playfair Display', serif;
   color: #2b2b2b;
-  font-size: 22px;
+  font-size: 16px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
+/* nu am folosit max-width-ul din XD - 1920px -
+  cred ca era prea mare pt ecranul meu
+  si nu aparea nicio modificare in browser (centrare etc)
+  (desi in mod ciudat, rezolutia monitorului e 1920 x 1080)
+  Am ales un max-width astfel incat sa fie aliniate :) */
+
+/* am adaptat dimensiunile, in unele locuri,
+  pentru a se potrivi cat mai mult cu design-ul
+  si am folosit numere rotunde */
+.container {
+  max-width: 1345px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* header */
+.header-secondary {
+  background: url(../images/banners/banner-homepage-header.png) no-repeat center
+    center / cover;
+  /* daca nu setez height dispare imaginea */
+  height: 500px;
+}
+
+.header-secondary .header-secondary-inner {
+  position: relative;
+}
+
+.header-secondary-inner .header-connect {
+  position: absolute;
+  color: #fff;
+  margin-top: 50px;
+  margin-left: 120px;
+}
+
+/* Am observat ca doar prin setarea display-ului in flex,
+elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) */
+.header-secondary-inner .header-connect ul {
+  display: flex;
+  align-items: center;
+}
+
+.header-secondary-inner .header-connect i {
+  /* am ales padding in loc de margin pt a mari spatiul click-uibil */
+  padding: 10px;
+  font-size: 30px;
+}
+
+.header-secondary-inner .header-connect li:last-child a {
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.header-secondary-inner .header-controls {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  /* nu stiu daca setatul unui margin-left e cea mai buna solutie,
+  dar e singura pe care am gasit-o :( */
+  margin-left: 800px;
+}
+
+.header-secondary-inner .header-controls ul {
+  display: flex;
+  align-items: center;
+}
+
+.header-controls .header-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cccccc;
+  margin-right: 20px;
+}
+
+.header-controls .header-search button {
+  font-size: 30px;
+  border-style: none;
+}
+
+.header-controls .header-search input {
+  font-family: 'Roboto', sans-serif;
+  border-style: none;
+  outline: none;
+  width: 200px;
+}
+
+.header-controls a i {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.header-primary {
+  display: flex;
+  align-items: center;
+  background-color: #2b2b2b;
+  height: 50px;
+  color: #e8e8e8;
+  text-transform: uppercase;
+  font-size: 19px;
+}
+
+.header-primary ul {
+  display: flex;
+  justify-content: space-between;
+}
+/* header */
+
+/* footer */
+.footer {
+  background-color: #e8e8e8;
+  font-size: 22px;
+  text-transform: lowercase;
+  line-height: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-inner .footer-contact ul {
+  margin-top: 40px;
+}
+
+.footer-inner .footer-nav {
+  display: flex;
+  margin-top: 40px;
+}
+
+.footer-inner .footer-nav ul:last-child {
+  margin-left: 160px;
+}
+
+.footer-connect {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  width: 360px;
+}
+
+.footer-connect .footer-newsletter input:nth-child(2) {
+  height: 34px;
+  width: 360px;
+  border: 1px solid #cccccc;
+}
+
+.footer-connect .footer-newsletter input:nth-child(3) {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-top: 20px;
+  border: 1px solid #cccccc;
+}
+
+.footer-connect .footer-newsletter label:nth-child(4) {
+  display: inline-block;
+  text-transform: none;
+  font-family: 'Roboto', sans-serif;
+  /* am folosit proprietatea setata initial in body (just for practice) */
+  font-size: initial;
+  line-height: 22px;
+  margin-left: 40px;
+  margin-top: 15px;
+}
+
+.footer-connect .footer-newsletter label:nth-child(4) a {
+  text-decoration: underline;
+}
+
+.footer-newsletter button {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: initial;
+  padding: 5px 15px;
+  margin-top: 15px;
+}
+
+.footer-connect .footer-social ul {
+  display: flex;
+}
+
+.footer-connect .footer-social li {
+  font-size: 35px;
+  margin: 20px 20px 0 0;
+}
+/* footer */
+
+/* content */
+.content {
+  position: relative;
+  font-weight: bold;
+}
+
+.home-catalog-preview {
+  margin-top: 80px;
+}
+
+.home-catalog-preview header h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.home-catalog-preview .product-tiles {
+  display: flex;
+  justify-content: center;
+}
+
+.product-tiles .product-tile {
+  margin: 0 10px;
+}
+
+.product-tile .product-tile-image {
+  position: relative;
+}
+
+.product-tile .product-tile-image .product-tile-badge {
+  position: absolute;
+  margin-left: -60px;
+  margin-top: 15px;
+  font-size: 40px;
+}
+
+.product-tile .product-tile-title a {
+  margin-top: 20px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.product-tiles .product-tile-price {
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.home-content {
+  display: flex;
+  margin-top: 120px;
+  margin-bottom: 140px;
+}
+
+.home-content section {
+  margin-left: 130px;
+}
+
+.home-content section h1 {
+  display: flex;
+  font-size: 44px;
+  margin-bottom: 40px;
+  justify-content: flex-end;
+}
+
+.home-content section p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: justify;
+}
+
+.home-content section p:last-child {
+  margin-top: 70px;
+}
+
+.home-catalog-preview .catalog-ctas {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  text-transform: lowercase;
+  border: 1px solid #2b2b2b;
+  width: 115px;
+  height: 50px;
+  padding: 11px 18px;
+  margin-top: 60px;
+  margin-bottom: 120px;
+}
+/* content */
