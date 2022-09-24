@@ -451,14 +451,18 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
 }
 
 .header-controls .header-search button {
-  font-size: 30px;
+  font-size: 22px;
   border-style: none;
+  background: none;
+  /*  da si la input la fel, m-a indus in eroare fundalul alb de la imagine
+  si am omis sa le setez ca in pdf */
 }
 
 .header-controls .header-search input {
   font-family: 'Roboto', sans-serif;
   border-style: none;
   outline: none;
+  background: none;
   width: 200px;
 }
 
@@ -480,6 +484,21 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
 .header-primary ul {
   display: flex;
   justify-content: space-between;
+}
+
+.header-primary ul a {
+  background-color: #2b2b2b;
+  height: 50px;
+  color: #e8e8e8;
+  text-transform: uppercase;
+  font-size: 19px;
+  transition: color 0.2s ease-in;
+}
+
+.header-primary ul a:hover {
+  color: #aeaeae;
+  /* aici animatia e mai discreta,
+  pt ca am zis sa o las tot in ton de gri (fiind monochrome :) ) */
 }
 /* header */
 
@@ -550,6 +569,12 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
   font-size: initial;
   padding: 5px 15px;
   margin-top: 15px;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in;
+}
+
+.footer-newsletter button:hover {
+  background-color: #2b2b2b;
+  color: #e8e8e8;
 }
 
 .footer-connect .footer-social ul {
@@ -569,7 +594,7 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
 }
 
 .home-catalog-preview {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .home-catalog-preview header h1 {
@@ -577,6 +602,16 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
   justify-content: center;
   font-size: 35px;
   margin-bottom: 30px;
+}
+
+.home-catalog-preview > header h1 {
+  border-top: 1px solid #cccccc;
+  /* efectiv am tot trecut pe langa ea in pdf
+  cu gandul sa o pun si pana la urma am uitat :(
+  (si mi-am adus aminte si de ce, incercam sa iar din xd culoarea
+  si nu ma lasa nicicum - ai dreptate ca nu e tocmai user friendly :),
+  asa ca am lasat-o cu gandul ca ma intorc :) */
+  padding-top: 10px;
 }
 
 .home-catalog-preview .product-tiles {
@@ -603,6 +638,12 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
   margin-top: 20px;
   font-size: 22px;
   text-transform: uppercase;
+  padding: 10px;
+  transition: color 0.5s ease-in-out;
+}
+
+.product-tile .product-tile-title a:hover {
+  color: #8e8e8e;
 }
 
 .product-tiles .product-tile-price {
@@ -642,15 +683,27 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
 }
 
 .home-catalog-preview .catalog-ctas {
+  display: flex;
+  justify-content: center;
+}
+
+.home-catalog-preview .catalog-ctas a {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 22px;
   text-transform: lowercase;
-  border: 1px solid #2b2b2b;
-  width: 115px;
+  border: 2px solid #2b2b2b;
+  /* am pus facut border mai groasa si un fundal gri pe hover
+  ca sa se vada ca se poate face click pe ea (sper sa fie ok :) ) */
   height: 50px;
   padding: 11px 18px;
   margin-top: 60px;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.home-catalog-preview .catalog-ctas a:hover {
+  background-color: #4a4a4a;
+  color: #fff;
 }
 /* content */
