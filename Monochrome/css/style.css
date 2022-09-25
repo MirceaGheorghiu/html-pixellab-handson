@@ -400,14 +400,16 @@ a {
 }
 
 .header-secondary .header-secondary-inner {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 120px;
+  /* a fost ridcol de usor sa scot margin-ul ala
+  si sa setez flex si padding, ca in pdf :)) */
 }
 
 .header-secondary-inner .header-connect {
-  position: absolute;
   color: #fff;
-  margin-top: 50px;
-  margin-left: 120px;
+  margin-top: 40px;
 }
 
 /* Am observat ca doar prin setarea display-ului in flex,
@@ -420,7 +422,7 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
 .header-secondary-inner .header-connect i {
   /* am ales padding in loc de margin pt a mari spatiul click-uibil */
   padding: 10px;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .header-secondary-inner .header-connect li:last-child a {
@@ -429,13 +431,11 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
 }
 
 .header-secondary-inner .header-controls {
-  position: absolute;
   display: flex;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 40px;
   /* nu stiu daca setatul unui margin-left e cea mai buna solutie,
   dar e singura pe care am gasit-o :( */
-  margin-left: 800px;
 }
 
 .header-secondary-inner .header-controls ul {
@@ -444,8 +444,6 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
 }
 
 .header-controls .header-search {
-  display: flex;
-  align-items: center;
   border: 1px solid #cccccc;
   margin-right: 20px;
 }
@@ -467,7 +465,7 @@ elementele se pozitioneaza inline (fara a mai fi nevoie de flex-direction: row) 
 }
 
 .header-controls a i {
-  font-size: 30px;
+  font-size: 28px;
   padding: 10px;
 }
 
